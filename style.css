@@ -177,9 +177,9 @@ ul {
 
 .card-info {
 	padding: 1rem;
-	gap: 1rem;
-	display: grid;
-	align-items: start;
+}
+.card-title {
+	padding-bottom: 1rem;
 }
 .card-footer {
 	align-content: center;
