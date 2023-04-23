@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
+
+/*
+==========
+Variables
+==========
+*/
+:root {
+	--primaryColor: #f15025;
+	--primaryColorGrad: #f15125b7;
+	--mainBlack: #222;
+	--mainBlackGrad: #222222d5;
+	--mainWhite: #fff;
+	--offWhite: #f7f7f7;
+	--darkGrey: #afafaf;
+	--mainTransition: all 0.3s linear;
+	--mainSpacing: 0.2rem;
+}
+
+/*
+==========
+Global Styles
+==========
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Fira Code", monospace;
+	color: var(--mainBlack);
+	background: var(--mainWhite);
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 1.25rem;
+}
+
+h1 {
+	font-size: 3.052rem;
+}
+
+h2 {
+	font-size: 2.441rem;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 1.953rem;
+}
+
+p {
+	font-weight: 300;
+	font-size: 0.7rem;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 3px solid var(--primaryColor);
+	color: var(--primaryColor);
+	margin: 3rem;
+	transition: var(--mainTransition);
+}
+
+.btn:hover {
+	background: var(--primaryColor);
+	color: var(--mainWhite);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+/** index */
+
+.navbar-index {
+	background: var(--darkGrey);
+	padding-inline: 2rem;
+}
+
+.link {
+	display: block;
+	padding: 1rem 0;
+	color: var(--primaryColor);
+	letter-spacing: var(--mainSpacing);
+	transition: var(--mainTransition);
+	cursor: pointer;
+}
+
+.link:hover {
+	color: var(--mainBlack);
+}
+
+@media screen and (min-width: 990px) {
+	.navbar-index-links {
+		max-width: 1170px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		margin: 0 auto;
+	}
+	.link {
+		text-align: center;
+	}
+}
+
+/** hero */
+.hero {
+	background: var(--primaryColor);
+	color: var(--mainWhite);
+	height: 100vh;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+.hero-center {
+	padding-inline: 2.5rem;
+}
+.hero-title {
+	font-size: 4rem;
+}
+
+.hero-text {
+	max-width: 40em;
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		background: linear-gradient(var(--primaryColorGrad), var(--mainBlackGrad)),
+			url(./images/image-2.jpeg) no-repeat fixed center/cover;
+	}
+}
+
+/** cartes */
+
+.main-cards {
+	padding: 4rem 0;
+}
+.main-cards-title {
+	text-align: center;
+}
+
+.cards {
+	display: grid;
+	width: 80vw;
+	max-width: 1170px;
+	gap: 2.5rem 2rem;
+	margin: 0 auto;
+	grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+	/* 1170/3  -  4.5rem */
+}
+.card {
+	display: grid;
+	grid-template-rows: 2fr 1fr auto;
+	grid-template-columns: 1fr;
+	border: 1px solid var(--darkGrey);
+}
+
+.card-info {
+	padding: 1rem;
+	gap: 1rem;
+	display: grid;
+}
+.card-footer {
+	background: var(--darkGrey);
+	padding: 0.5rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+}
+.card-footer .fab {
+	color: var(--primaryColor);
+}
+
+/** tuiles */
+.tuiles-main {
+	max-width: 1170px;
+	width: 90vw;
+	margin: 0 auto;
+	padding: 5rem 0;
+}
+.tuiles-title {
+	text-align: center;
+}
+
+.tuiles {
+	display: grid;
+	gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+.tuiles{
+	grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(5, 1fr);
+}
+}
+
+@media screen and (min-width: 990px) {
+.tuiles{
+	grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 1170px) {
+
+	.tuiles {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(5, 200px);
+		grid-template-areas:
+			"a a a b"
+			"a a a c"
+			"d d d d"
+			"e f f f"
+			"e g h i";
+	}
+	.tuile img{
+		height: 100%;
+		object-fit: cover;
+	}
+	.tuile-1 {
+		grid-area: a;
+	}
+	.tuile-2 {
+		grid-area: b;
+	}
+	.tuile-3 {
+		grid-area: c;
+	}
+	.tuile-4 {
+		grid-area: d;
+	}
+	.tuile-5 {
+		grid-area: e;
+	}
+	.tuile-6 {
+		grid-area: f;
+	}
+	.tuile-7 {
+		grid-area: g;
+	}
+	.tuile-8 {
+		grid-area: h;
+	}
+	.tuile-9 {
+		grid-area: i;
+	}
+}
+
+/**  mise en page */
+
