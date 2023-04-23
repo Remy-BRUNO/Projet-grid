@@ -167,9 +167,10 @@ ul {
 	grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
 	/* 1170/3  -  4.5rem */
 }
+
 .card {
 	display: grid;
-	grid-template-rows: 2fr 1fr auto;
+	grid-template-rows: auto 1fr 50px;
 	grid-template-columns: 1fr;
 	border: 1px solid var(--darkGrey);
 }
@@ -178,8 +179,10 @@ ul {
 	padding: 1rem;
 	gap: 1rem;
 	display: grid;
+	align-items: start;
 }
 .card-footer {
+	align-content: center;
 	background: var(--darkGrey);
 	padding: 0.5rem 0;
 	display: grid;
