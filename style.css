@@ -207,20 +207,19 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-.tuiles{
-	grid-template-columns: 1fr 1fr;
+	.tuiles {
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: repeat(5, 1fr);
-}
+	}
 }
 
 @media screen and (min-width: 990px) {
-.tuiles{
-	grid-template-columns: 1fr 1fr 1fr;
-}
+	.tuiles {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 @media screen and (min-width: 1170px) {
-
 	.tuiles {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(5, 200px);
@@ -231,7 +230,7 @@ ul {
 			"e f f f"
 			"e g h i";
 	}
-	.tuile img{
+	.tuile img {
 		height: 100%;
 		object-fit: cover;
 	}
@@ -265,4 +264,107 @@ ul {
 }
 
 /**  mise en page */
+.header-graal {
+	background: var(--primaryColor);
+	text-align: center;
+	padding: 0.5rem 0;
+}
 
+.title-graal {
+	color: var(--mainWhite);
+}
+
+.main-graal {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+}
+
+.navbar-graal {
+	background: var(--darkGrey);
+}
+
+.navbar-graal-link a {
+	display: inline-block;
+	color: var(--mainBlack);
+	padding: 1rem;
+	font-size: 1.1rem;
+	letter-spacing: var(--mainSpacing);
+}
+
+.text-graal {
+	font-size: 1rem;
+	padding: 2rem;
+}
+
+.social-graal {
+	background: var(--primaryColor);
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	text-align: center;
+}
+
+.social-graal .fab {
+	color: var(--mainWhite);
+	font-size: 1.1rem;
+}
+
+.copyright {
+	background: var(--mainBlack);
+	color: var(--mainWhite);
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-graal-links {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.main-graal {
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas:
+			"a a a"
+			"b c d"
+			"e e e";
+	}
+	.header-graal {
+		grid-area: a;
+	}
+	.navbar-graal {
+		grid-area: b;
+	}
+	.text-graal {
+		grid-area: c;
+	}
+	.social-graal {
+		grid-area: d;
+	}
+	.copyright {
+		grid-area: e;
+	}
+	.navbar-graal-links {
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		text-align: center;
+		align-items: center;
+	}
+	.social-graal {
+		background: var(--darkGrey);
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		text-align: center;
+		align-items: center;
+	}
+}
